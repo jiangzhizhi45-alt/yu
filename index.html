@@ -78,7 +78,7 @@
 
         async function getDailyCode() {
             try {
-                const response = await fetch('https://script.google.com/macros/s/AKfycbxW3JOaMoqf6jHuISGVY1Snp7hu0u_Pu9kdHCtqq4Mft-QjKe91ahNqphQXiG2-uAko/exec'); // 替換為新的 Google Apps Script Web 應用程式 URL
+                const response = await fetch('https://script.google.com/macros/s/AKfycbwKhBVj9rdZcMrHejsjoGPz8XDpn1At8J32l4fGu8fj9Cjl_uNgtjKRH_rGyzedmIjz/exec'); // 替換為新的 Google Apps Script Web 應用程式 URL
                 const data = await response.json();
                 return data.code;
             } catch (error) {
@@ -110,7 +110,7 @@
                 }
 
                 // Google 表單預填連結
-                const formUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSdRtuL5HNMusJBjkxsz6GLAEyav0VleGHlYP-0sL5mUQeDZJg/formResponse'; // 替換為新的打卡問卷ID
+                const formUrl = 'https://docs.google.com/forms/d/e/1FAIpQLScHLpnhAm991Z1tbri2NhbnL_BxFgIpI7JKumgQkBMabQSHuw/formResponse'; // 替換為新的打卡問卷ID
                 const prefilledUrl = `${formUrl}?=usp=pp_url&entry.1366094180=${encodeURIComponent(shift)}&entry.538125100=${encodeURIComponent(userId)}&entry.1841717274=${encodeURIComponent(qrContent)}`;
 
                 // 自動提交表單（使用 iframe 隱藏提交過程）
